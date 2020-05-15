@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+}
+
+.slideshow {
+	overflow: hidden;
+}
+
+.slideshow figure {
+	position: relative;
+	width: 400%;
+	margin: 0;
+	left: 0;
+	animation: 12s slider infinite;
+}
+
+.slideshow figure img {
+	float: left;
+	width: 25%;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	30% {
+		left: 0;
+	}
+	33.33% {
+		left: -100%;
+	}
+	63.33% {
+		left: -100%;
+	}
+	67% {
+		left: -200%;
+	}
+	97% {
+		left: -200%;
+	}
+	100% {
+		left: -300%;
+	}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
